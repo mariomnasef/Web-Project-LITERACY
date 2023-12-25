@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<title> LITERACY Web Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<head>
+<style>
+        body{
+    background-image: url("c:/mariam pro/photo proj/literacy phot.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+ .form1{
+     width: 100px;
+     height:100px ;
+    border:8px solid;
+    border-color: aliceblue;
+    display: flex;
+    justify-content:last baseline;
+
+   
+}
+
+.liter{
+   width: 110px;
+    height:60px;
+    background:rgb(184, 223, 221) ;
+    animation-name: initial;
+    position:relative;
+    animation-duration: 4s;
+    animation-direction: alternate-reverse;
+}
+@keyframes initial {
+        from{ top:0px;}
+        to{top: 200px;}
+    }
+.liter{
+    animation:mymove 5s infinite;
+}
+@keyframes mymove{
+    50% { text-shadow: 10px 20px 30px   black;}
+}
+.photo{
+   display:flex;  
+   justify-content: flex-end;
+   justify-content: space-evenly;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:mediumturquoise;
+}
+
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:mediumvioletred;
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 50px;
+  top: 30px;
+  width: 90%; /* Full width */
+  height: 90%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color:darkmagenta; /* Fallback color */
+  background-color:darkmagenta; /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color:cyan;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color:crimson;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color:blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+    <div >
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+          
+    </div>
+
+<div class="liter" >
+<p><h1><b><i> Literacy </i> </b> </h1></p>
+</div>
+
+<div class="photo">
+    <img src="c:/mariam pro/photo proj/literacy p.jpg" height="300px" width="300px"/>
+    <img src="c:/mariam pro/photo proj/literacy.jpg" height="300px" width="300px"/>
+
+</div>
+
+
+<h2> registration form for student</h2>
+<div class="form1">
+<form action=" " target=" " method=" post">
+
+<label for="textbox1"><b>First Name</b></label>
+<input id ="textbox1" type="text" name="first Name" maxlegth="20" required/> <br/>
+
+<label for="textbox2"><b>Last Name</b></label>
+<input id ="textbox2" type="text" name="last Name" maxlegth="20" required/> <br/>
+
+<label for="textbox3"><b>Age</b></label>
+<input id ="textbox3" type="number" name="age" required/> <br/>
+
+<label for="textbox4"><b>Password</b></label>
+<input id ="textbox4" type="password" maxlegth="20" required/> <br/>
+
+<label for="textbox5"><b>Education</b></label>
+<input id ="textbox5" type="text" name="Education" maxlegth="20" required/> <br/>
+<button type="sign in"><b>sign in </b></button> &nbsp; &nbsp; &nbsp; <button id="myBtn"><b>show</b></button>
+
+</form>
+</div >
+
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2><b> Data Of Illiterate Persons </b></h2>
+    <p><b> 1- Ahmed Mohamed Ahmed </b> </br>
+   <b>Governorate: gharbia</b> </br>
+  <b> Administration: Tanta Education Administration </b></br>
+   <b>Mobile Number: 21234567891</b>
+    </p>
+   
+    <p><b>2-mohamed Mohamed Ahmed</b>
+    <b>Governorate: gharbia</b> </br>
+  <b> Administration: Tanta Education Administration</b></br>
+   <b>Mobile Number: 11223344556</b>
+    </p>
+    <p>
+    <b>3-Samaira Mohamed Mahmoud</b>
+    <b>Governorate: gharbia</b> </br>
+  <b> Administration: Tanta Education Administration</b></br>
+   <b>Mobile Number: 12312312312</b>
+    </p>
+     <p>
+    <b>4-Fatma Mohamed Ahmed</b>
+    <b>Governorate: gharbia</b> </br>
+  <b> Administration: Tanta Education Administration</b></br>
+   <b>Mobile Number:12341234123 </b>
+    </p>
+    <p>
+            <b>5-Aml Mahamoud Mohamed</b>
+            <b>Governorate: gharbia</b> </br>
+          <b> Administration: Tanta Education Administration</b></br>
+           <b>Mobile Number:13513532137 </b>
+            </p>
+            
+  </div>
+
+</div>
+</br>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+
+
